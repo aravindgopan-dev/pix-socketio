@@ -14,10 +14,11 @@ const server = http.createServer(app);
 
 const io = new SocketIOServer(server, {
   cors: {
-    origin: '*',
-    methods: ['GET', 'POST'],
-  },
+    origin: ['http://localhost:3000', 'https://yourfrontend.com'], // Add your production frontend later
+    methods: ['GET', 'POST']
+  }
 });
+
 
 interface Player {
   id: string;
