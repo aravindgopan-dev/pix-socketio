@@ -14,10 +14,12 @@ const server = http.createServer(app);
 
 const io = new SocketIOServer(server, {
   cors: {
-    origin: ['http://localhost:3000', 'https://yourfrontend.com'], // Add your production frontend later
-    methods: ['GET', 'POST']
+    origin: ["http://localhost:3000", "https://pix-frontend-eight.vercel.app"],
+    methods: ["GET", "POST"],
+    credentials: true
   }
 });
+
 
 
 interface Player {
